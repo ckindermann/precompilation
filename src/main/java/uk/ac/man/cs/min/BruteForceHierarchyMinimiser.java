@@ -35,7 +35,7 @@ public class BruteForceHierarchyMinimiser {
         String output = args[3];
 
         OWLOntology ontology = OntologyLoader.load(ontPath);
-        ExplicitClassHierarchy ech = new ExplicitClassHierarchy(ontology);
+        MaterialisedClassHierarchy ech = new MaterialisedClassHierarchy(ontology);
 
         Set<OWLAxiom> atomicAxioms = ech.getAxioms();
         Minimiser minimiser = new Minimiser(ontology,reasonername,timeout);
