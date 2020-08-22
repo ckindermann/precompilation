@@ -1,3 +1,12 @@
+# Maven binaries
+/target
+
+#Local test files
+/test
+
+# shell scripts
+*.sh
+
 # Compiled class file
 *.class
 
