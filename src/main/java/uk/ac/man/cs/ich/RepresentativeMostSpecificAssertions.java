@@ -37,6 +37,7 @@ public class RepresentativeMostSpecificAssertions {
 
     //expects two ontologies:
     //the first is an ontology containing most specific class assertions
+    //(not necessarily a cardinality minimal representation thereof!)
     //the second is an ontology containing a (transitive reduct of a) class hierarchy
     public RepresentativeMostSpecificAssertions(String realisationPath, String classificationPath) throws Exception{
         this.factory = OWLManager.createOWLOntologyManager().getOWLDataFactory(); 

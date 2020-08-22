@@ -39,6 +39,7 @@ public class RepresentativeTransitiveReduct {
     private Set<OWLAxiom> deterministicAxioms;
 
     //expects an ontology which is (transitive reduct of) a class hierarchy
+    //(NB: this is not necessarily a cardinality minimal representation of a transitive reduct!)
     public RepresentativeTransitiveReduct(OWLOntology o) throws Exception {
         //TODO: make sure the given ontology is indeed an transitive reduct class hierarchy
         this.ontology = o;
