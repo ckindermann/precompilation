@@ -56,6 +56,14 @@ public class RepresentativeMostSpecificAssertions {
         this(OntologyLoader.load(realisationPath), OntologyLoader.load(classificationPath));
     }
 
+    public Set<OWLAxiom> getRepresentativeMSCA(){
+        Set<OWLAxiom> rep = new HashSet<>();
+        rep.addAll(this.tautologicalCompletion);
+        rep.addAll(this.nonDeterministicAxioms);
+        rep.addAll(this.deterministicAxioms);
+        return rep; 
+    }
+
     //get 'most specific class assertions' from realisation ontology
     private void initialiseMostSpecificAssertions(){
         this.mostSpecificClassAssertions = new HashSet<>();
