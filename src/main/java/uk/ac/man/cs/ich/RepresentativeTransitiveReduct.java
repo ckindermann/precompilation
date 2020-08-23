@@ -3,9 +3,6 @@ package uk.ac.man.cs.ich;
 import uk.ac.man.cs.util.*;
 import uk.ac.man.cs.ont.*;
 
-import org.semanticweb.owlapi.reasoner.OWLReasoner;
-import org.semanticweb.owlapi.reasoner.InferenceType;
-import org.semanticweb.owlapi.reasoner.*;
 import org.semanticweb.owlapi.model.*; 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.search.EntitySearcher;
@@ -20,6 +17,10 @@ import java.util.stream.*;
  * Created by chris on 16/07/19.
  */
 
+//NB: this does not(!) make use of a reasoner
+//this has the advantage of using the output of any tool
+//that can materialise the needed entailment sets
+//TODO: the class name 'representative' is not particulary well chosen
 public class RepresentativeTransitiveReduct {
 
     private OWLOntology ontology;
